@@ -1,0 +1,22 @@
+3 sayiyi arasından hangisin en büyük olduğunu bulma
+             int a, b, c;
+             Console.WriteLine("A sayisini giriniz");
+             a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("B sayisini giriniz");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("C sayisini giriniz");
+            c = Convert.ToInt32(Console.ReadLine());
+
+
+            if (a > b && a > c)
+            {
+                Console.WriteLine("En büyük sayi a");
+            }
+            else if (b > a && b > c)  
+            {
+                Console.WriteLine("En büyük sayi b");
+            }
+            else if (c > a && c > b)  
+            {
+                Console.WriteLine("En büyük sayi c");
+            }
