@@ -1,0 +1,43 @@
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, toplam = 0;
+            for (int n = 1; n <= 10; n++) 
+            {
+                toplam += n;
+                if(toplam >=30)
+                {
+                    Console.WriteLine("Toplam 30'dan küçük sayi= {0}", n);
+
+                    break;
+                }
+            }
+
+            Console.WriteLine("Döngü bitti, sayilarin toplami = {0}", toplam);
+            Console.WriteLine();
+
+            int a, b, result;
+            Console.WriteLine("Lütfen birinci sayiyi giriniz");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Lütfen ikinci sayiyi giriniz");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            result = a % b;
+            
+           if(result== 0)
+            {
+                Console.WriteLine("{0}Sayisi {1} sayisina tam bölünüyor",a,b);
+            }
+           else
+            {
+                Console.WriteLine("{0}Sayisi {1} sayisina tam bölünüyor kalan={2}",a,b,result);
+            }
+            Console.ReadLine();
+        }
+    }
+}
