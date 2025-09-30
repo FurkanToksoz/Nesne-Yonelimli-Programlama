@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleApp1
 {
@@ -70,21 +71,21 @@ namespace ConsoleApp1
 
             int a, b, c = 0;
             Console.WriteLine("Bir sayi giriniz");
-            b =int.Parse(Console.ReadLine());
+            b = int.Parse(Console.ReadLine());
 
-            for (a = 2; a < b; a++) 
+            for (a = 2; a < b; a++)
             {
                 c = 0;
                 for (int j = 2; j < a; j++)
                 {
-                    if (a%j == 0)
+                    if (a % j == 0)
                     {
                         c++;
                     }
                 }
                 if (c == 0)
                 {
-                    Console.WriteLine("{0} sayisina kadar olan sayilar ={1}",b,a);
+                    Console.WriteLine("{0} sayisina kadar olan sayilar ={1}", b, a);
                 }
 
 
@@ -92,6 +93,44 @@ namespace ConsoleApp1
             }
             Console.ReadLine();
 
+
+            List<int> list = new List<int>();
+            {
+                1,2,3,4,5,6,7,8,9,10
+            };
+            Console.WriteLine("girilen sayıdan oluşan asal sayi");
+            foreach (int asalsayi sayi in asalsayilar) 
+                {
+                for (int i = 2; i <= asalsayi; i++)
+                {
+                    if (AsalMi(i))
+                        Console.WriteLine(i + "asal sayilar");
+
+                }
+
+            }
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            int sayi;
+
+            do
+            {
+                Console.WriteLine("Bir sayı giriniz:");
+                sayi = int.Parse(Console.ReadLine());
+
+                if (sayi < 10)
+                {
+                    Console.WriteLine("Girdiğiniz sayı 10'dan küçüktür.");
+                }
+                else
+                {
+                    Console.WriteLine("Girdiğiniz sayı 10 veya daha büyüktür.");
+                }
+
+            } while (false);
+
+            Console.ReadLine();
         }
     }
 }
