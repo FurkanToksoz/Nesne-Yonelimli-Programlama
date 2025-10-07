@@ -1,0 +1,82 @@
+using System;
+
+public class program
+{
+    static void Main(string[] args)
+    {
+        string metin = ogrNo(5, "Furkan");
+        Console.WriteLine(metin);
+///////////////////////////////////////////////////////////////////////////////
+        int sayi1 = SayiAl("Birinci sayıyı girin: ");
+        int sayi2 = SayiAl("İkinci sayıyı girin: ");
+        Console.WriteLine("İlk Sayı: " + sayi1);
+        Console.WriteLine("İkinci Sayı: " + sayi2);
+        Console.WriteLine("Toplam: " + toplamsayi(sayi1, sayi2));
+
+        int a = SayiAl("Birinci  sayıyı girin: ");
+        int b = SayiAl("İkinci sayıyı girin: ");
+        int c = SayiAl("Üçüncü  sayıyı girin: ");
+        int enBuyuk = EnBuyukBul(a, b, c);
+        Console.WriteLine("Belirlediğin 3 sayıdan en büyüğü: " + enBuyuk);
+////////////////////////////////////////////////////////////////////////////////////
+        HesapMakinesi(sayi1, sayi2);
+
+        Console.ReadLine();
+    }
+
+    static int SayiAl(string mesaj)
+    {
+        Console.Write(mesaj);
+        return Convert.ToInt32(Console.ReadLine());
+    }
+
+    static int toplamsayi(int sayi1, int sayi2)
+    {
+        return sayi1 + sayi2;
+    }
+
+    static int EnBuyukBul(int a, int b, int c)
+    {
+        int enBuyuk = a;
+        if (b > enBuyuk) enBuyuk = b;
+        if (c > enBuyuk) enBuyuk = c;
+        return enBuyuk;
+    }
+
+    static void HesapMakinesi(int sayi1, int sayi2)
+    {
+        Console.WriteLine("İşlem seç: +, -, *, /");
+        char islem = Console.ReadKey().KeyChar;
+        Console.WriteLine();
+
+        switch (islem)
+        {
+            case '+':
+                Console.WriteLine($"{sayi1} + {sayi2} = {sayi1 + sayi2}");
+                break;
+            case '-':
+                Console.WriteLine($"{sayi1} - {sayi2} = {sayi1 - sayi2}");
+                break;
+            case '*':
+                Console.WriteLine($"{sayi1} * {sayi2} = {sayi1 * sayi2}");
+                break;
+            case '/':
+                if (sayi2 != 0)
+                    Console.WriteLine($"{sayi1} / {sayi2} = {(double)sayi1 / sayi2}");
+                else
+                    Console.WriteLine("Sıfıra bölünemez");
+                break;
+
+        }
+    }
+
+    static string ogrNo(int sayi, string isim)
+    {
+        return string.Format("Öğrenci no= {0}  isim={1}", sayi, isim);
+    }
+
+    static void ekranayaz()
+    {
+        Console.WriteLine("Furkan");
+    }
+}
