@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Insan
+    {
+        int no;
+        string soyad;
+        string ad = "Furkan";
+
+        public Insan(string soyisim, string isim, int numara) // 3 parametreli constraction
+        {
+            this.soyad = soyisim;
+            this.ad = isim;
+            this.no = numara;
+        }
+
+        public Insan(string soyisim, string isim) // 2 parametreli constraction
+        {
+            this.soyad = soyisim;
+            this.ad = isim;
+        }
+
+        public Insan(string babasoyad) // 1 parametreli constraction
+        {
+            this.soyad = babasoyad;
+        }
+
+        public void IsimGetir()
+        {
+            Console.WriteLine($"ad:{ad}, soyisim:{soyad}");
+            Console.ReadLine();
+        }
+    }
+}
